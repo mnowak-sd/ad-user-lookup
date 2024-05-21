@@ -1,0 +1,11 @@
+dnspython==2.6.1
+fire==0.6.0
+ldap3==2.9.1
+ms_active_directory==1.13.0
+pyasn1==0.6.0
+pycryptodome==3.20.0
+python-dotenv==1.0.1
+pytz==2024.1
+six==1.16.0
+structlog==24.1.0
+termcolor==2.4.0
