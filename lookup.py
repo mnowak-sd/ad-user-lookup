@@ -36,7 +36,7 @@ def lookup(attribute: str, value: str):
     users = session.find_users_by_attribute(
         attribute_name=attribute,
         attribute_value=value,
-        attributes_to_lookup=[AD_ATTRIBUTE_GET_ALL_NON_VIRTUAL_ATTRS]
+        attributes_to_lookup=['manager']
         )
     
     if not users:
@@ -49,7 +49,7 @@ def lookup(attribute: str, value: str):
         user = users[0]
     
     for k, v in sorted(user.all_attributes.items(), key=(lambda k: k)):
-        print(f'"{k}": "{v}"')
+        logger.info(f'"{k}": "{v}"')
 
 
 if __name__ == '__main__':
